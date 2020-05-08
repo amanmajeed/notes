@@ -3,7 +3,7 @@
 ### 1. Docker Pull
 * `docker pull tomcat:jre8`
 
-### 2. Manage Images
+### 2. Manage images
 * List the images : `docker images`
 * Command to remove image : `docker rmi <ImageName>`
 
@@ -30,7 +30,7 @@
 * -e : Export and pass a parameter=value combo to the container
     * e.g. `docker exec -e UID='myuser' 74f86665f0fd printenv UID`
 
-### 5. Manage Containers
+### 5. How to manage containers
 * Command to start a stopped container : `docker start <ContainerName>`
 * Command to stop a container : `docker stop <ContainerName>`
 * Command to restart a container : `docker restart <ContainerName>`
@@ -38,11 +38,11 @@
 * Command to kill a running container : `docker kill <ContainerName>`
 * Rename container : `docker rename <ContaineName>`
 
-### 6. Run & Exec & Start
+### 6. Order of run & exec & start
 * Order of these commads will be
 * Run ➔ exec ➔ stop ➔ start ➔ exec ➔ ..Repeat..
 
-### 7. ps
+### 7. See container details (ps)
 * Command to list the running processes
 * Command : `docker ps -a`
 * -a : Show runnign and stopped containers
