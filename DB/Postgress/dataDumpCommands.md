@@ -25,13 +25,13 @@
     * HEADER is to include header in the csv
     * DELIMITER ',' is to have comma seperated delimiter
     ```
-    COPY persons TO 'persons_db.csv' DELIMITER ',' CSV HEADER;
+    COPY persons TO '/fulPath/file.csv' DELIMITER ',' CSV HEADER;
     ```
 * Export selected columns from a table called persons
-    ```
-    COPY persons(first_name,last_name,email) TO 'persons_partial_db.csv' DELIMITER ',' CSV HEADER;
+    ```sql
+    COPY persons(first_name,last_name,email) TO '/fulPath/file.csv' DELIMITER ',' CSV HEADER;
     ```
 * Export based on a query
     ```sql
-    COPY (select * from table) TO 'persons_partial_db.csv' DELIMITER ',' CSV HEADER;
+    COPY (select * from table) TO '/fulPath/file.csv' DELIMITER ',' CSV HEADER;
     ```
