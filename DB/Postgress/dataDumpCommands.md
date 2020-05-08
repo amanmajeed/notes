@@ -1,14 +1,37 @@
 ### Steps to backup and restore DB
 
 * Steps to backup/dump DB
-    * Command : `pg_dump -U postgres -W -F t <DBName> > <FileName>.tar`
     * -U : user
     * -W : Ask for password
     * -F : File type 
     * -t : tar
+    * Command : 
+    ```bash
+    pg_dump -U postgres -W -F t <DBName> > <FileName>.tar
+    ```
 
 * Restore
-    * Command : `psql -U username --set ON_ERROR_STOP=on -f backupfile`
+    ```bash
+    psql -U username --set ON_ERROR_STOP=on -f backupfile
+    ```
 
 * Restore - 2
-    * Command : `pg_restore --dbname=dvdrental_tpl dvdrental.tar`
+    ```bash
+    pg_restore --dbname=dvdrental_tpl dvdrental.tar
+    ```
+
+### Export to CSV
+* Export a table called persons with header
+    * HEADER is to include header in the csv
+    * DELIMITER ',' is to have comma seperated delimiter
+    ```
+    COPY persons TO 'persons_db.csv' DELIMITER ',' CSV HEADER;
+    ```
+* Export selected columns from a table called persons
+    ```
+    COPY persons(first_name,last_name,email) TO 'persons_partial_db.csv' DELIMITER ',' CSV HEADER;
+    ```
+* Export based on a query
+    ```sql
+    COPY (select * from table) TO 'persons_partial_db.csv' DELIMITER ',' CSV HEADER;
+    ```

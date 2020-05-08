@@ -1,5 +1,8 @@
 ## Shortcuts on postgress - psql
 
+### Display
+* Enable expanded display : `\x`
+
 ### Generic
 * List all databases : `\l`
 * List all objects : `\d`
