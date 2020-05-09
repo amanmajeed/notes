@@ -35,3 +35,5 @@
     ```sql
     COPY (select * from table) TO '/fulPath/file.csv' DELIMITER ',' CSV HEADER;
     ```
+* Use `COPY` while running on server
+* Use `\copy` while running on client, the rest of the commands remaining the same
