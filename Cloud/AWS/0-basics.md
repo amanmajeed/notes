@@ -1,0 +1,20 @@
+- Cloud Foundations
+- Cloud Attributes
+  - Choice of provider
+  - Agility, OnDemand, Self service
+  - Resource pooling
+  - Admin & Monitoring
+  - Core data center services
+  - Resilient, Elastic & Subscription
+  - Managed services
+- Deployment Models:
+  - Private cloud
+  - Community cloud
+  - Public cloud
+  - Hybrid cloud
+- Service Models:
+  - Software as a Service (SaaS)
+  - Platform as a Service (PaaS)
+  - Infrastructure as a Service (IaaS)
+- SPIDERS
+  - "SaaS", "PaaS", "IaaS", "bigData", "Elastic", "Resilient" & "Subscription"

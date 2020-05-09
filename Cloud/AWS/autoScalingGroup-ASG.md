@@ -1,0 +1,27 @@
+- ASG : Auto Scaling Group
+- Self Healing or Self-recovering Infra
+- Min Size :  The minimum instances as part of ASG
+- Cloud Watch : Raises the alarms to ASG
+- ASG does the de/scaling
+- ASG configuration once created, cannot be changed
+- Configure Scaling Policies
+  - Use scaling policies to adjust capacity of this group
+    - Scale Between : Set min and max number of instances. To protect against infinite scaling
+    - Increase Group Size / Decrease Group Size
+      - Execute Policy When -> Create Alarm
+        - When .. (something happens)
+        - For at least .. times over ... mins
+        - Name of the Alarm
+      - Take the action
+        - Instances : Number of instances to increase/decrease
+        - Percentage of group : Number based on the impact % of the group
+        - Instance need : Seconds needed for EC2 to startup
+    - The increase/decrease is set to happen based on aggregate CPU Utilization of all instances.
+    - Cool down period can also be configured, during which time the actions are ignored.
+- Configure Notifications
+  - Notification after scaling/action is done
+  - Email ID can be configured.
+- Create Lifestyle Hooks
+  - Perform custom action after scale up or down
+  - e.g. Install software after scale up
+  - e.g. Transfer logs before scale down
