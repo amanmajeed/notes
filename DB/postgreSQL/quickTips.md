@@ -26,6 +26,6 @@
 
 ### Version
 * Find the version
-    ```sql  
+    ```sql
     SELECT version();
     ```
